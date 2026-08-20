@@ -4,8 +4,6 @@ weight: 43
 source_confluence_id: 28574374
 draft: false
 ---
-![](/images/kb/28574374/28574375.png)
-
 The documentation topics will help you understand what iDNA
 Applications is, how it works and how you can install and use it within
 your organization.

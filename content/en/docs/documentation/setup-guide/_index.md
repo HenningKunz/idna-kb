@@ -5,8 +5,6 @@ date: 2020-07-07
 source_confluence_id: 28574513
 draft: false
 ---
-![](/images/kb/28574513/28578744.png)
-
 Welcome to panagenda iDNA Applications! This guide will help you to set
 it up.
 

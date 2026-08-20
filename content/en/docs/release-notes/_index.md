@@ -4,8 +4,6 @@ weight: 91
 source_confluence_id: 28574514
 draft: false
 ---
-![](/images/kb/28574514/28574515.png)
-
 Stay up to date! The release notes show you in which version specific
 features, improvements and bug fixes were added.
 

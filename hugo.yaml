@@ -34,15 +34,22 @@ menu:
       name: Documentation
       pageRef: /docs
       weight: 1
-    - name: Search
+    - identifier: technical-articles
+      name: Technical Articles
+      pageRef: /docs/technical-articles
       weight: 2
+    - identifier: frequent-cases
+      name: Troubleshooting
+      pageRef: /docs/frequent-cases
+      weight: 3
+    - identifier: release-notes
+      name: Release Notes
+      pageRef: /docs/release-notes
+      weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
-    - name: GitHub
-      weight: 3
-      url: "https://www.panagenda.com"
-      params:
-        icon: globe
 
 params:
   description: Knowledge base for panagenda iDNA Applications

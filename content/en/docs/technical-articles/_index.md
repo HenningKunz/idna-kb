@@ -4,8 +4,6 @@ weight: 2
 source_confluence_id: 28574316
 draft: false
 ---
-![](/images/kb/28574316/28574317.png)
-
 Find inspiration in our technical articles and learn how to get the most
 out of our software in your environment.
 

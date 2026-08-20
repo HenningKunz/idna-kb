@@ -36,6 +36,21 @@ def load_pages():
         pages[f.stem] = {"fm": fm, "body": body}
     return pages
 
+def strip_leading_banner_image(body):
+    """Confluence overview pages often start with a decorative banner image
+    (e.g. a generic stock photo) as the very first line - this clashes with
+    the card-grid landing page style, so drop it if it's the first thing."""
+    lines = body.split("\n")
+    idx = 0
+    while idx < len(lines) and lines[idx].strip() == "":
+        idx += 1
+    if idx < len(lines) and re.match(r"^!\[\]\(/images/", lines[idx].strip()):
+        del lines[idx]
+        # also drop the blank line that follows, if any
+        while idx < len(lines) and lines[idx].strip() == "":
+            del lines[idx]
+    return "\n".join(lines)
+
 def convert_shortcodes(body):
     def open_repl(m):
         typ = {"note": "info", "warning": "warning", "tip": "info"}.get(m.group(1), "info")
@@ -59,6 +74,7 @@ def write_node(slug, pages, children, out_dir, is_root_docs_index=False):
     date = data["fm"].get("date", "")
     source_id = data["fm"].get("source_confluence_id", "")
     body = convert_shortcodes(data["body"])
+    body = strip_leading_banner_image(body)
 
     kids = sorted(children.get(slug, []), key=lambda s: int(pages[s]["fm"].get("weight", 999)))
 
@@ -110,6 +126,7 @@ def main():
     root_data = pages[root_slug]
     title = root_data["fm"].get("title", "Documentation")
     body = convert_shortcodes(root_data["body"])
+    body = strip_leading_banner_image(body)
     kids = sorted(children.get(root_slug, []), key=lambda s: int(pages[s]["fm"].get("weight", 999)))
 
     front = [
