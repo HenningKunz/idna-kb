@@ -1,0 +1,82 @@
+baseURL: "/"
+title: "panagenda iDNA Applications Knowledge Base"
+theme: "hextra"
+
+enableRobotsTXT: true
+enableGitInfo: false
+
+outputs:
+  home: [html]
+  page: [html]
+  section: [html, rss]
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+languages:
+  en:
+    label: English
+    weight: 1
+    title: "iDNA Applications KB"
+    contentDir: content/en
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+enableInlineShortcodes: true
+
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
+    - name: Search
+      weight: 2
+      params:
+        type: search
+    - name: GitHub
+      weight: 3
+      url: "https://www.panagenda.com"
+      params:
+        icon: globe
+
+params:
+  description: Knowledge base for panagenda iDNA Applications
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: wide
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+    flexsearch:
+      index: content
+      tokenize: forward
+      js: "js/flexsearch.bundle.min.js"
+
+  page:
+    width: normal
+
+  highlight:
+    copy:
+      enable: true
+      display: hover

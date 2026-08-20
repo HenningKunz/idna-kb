@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "80d99d2e-76ae-4fce-a98c-8f3c194cef65",
+		"name": "IFA API",
+		"description": "ifa external api collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Databases",
+			"item": [
+				{
+					"name": "Get database",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases/4903",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases",
+								"4903"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get database by server and filename",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases?server=moloc/panagenda&fileName=nc/328/SmartChanger.ntf",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases"
+							],
+							"query": [
+								{
+									"key": "server",
+									"value": "moloc/panagenda"
+								},
+								{
+									"key": "fileName",
+									"value": "nc/328/SmartChanger.ntf"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all databases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all focus databases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases?focus=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases"
+							],
+							"query": [
+								{
+									"key": "focus",
+									"value": "true"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all none focus databases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases?focus=false",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases"
+							],
+							"query": [
+								{
+									"key": "focus",
+									"value": "false"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all database custom properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases/all/customProperties",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases",
+								"all",
+								"customProperties"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get custom properties for x databases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases/all/customProperties?resIds=402, 403, 404",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases",
+								"all",
+								"customProperties"
+							],
+							"query": [
+								{
+									"key": "resIds",
+									"value": "402, 403, 404"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all database details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases/all/details",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases",
+								"all",
+								"details"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get details for x databases",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk=",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/databases/all/details?resIds=402, 403, 404",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"databases",
+								"all",
+								"details"
+							],
+							"query": [
+								{
+									"key": "resIds",
+									"value": "402, 403, 404"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Replica Sets",
+			"item": [
+				{
+					"name": "Get replica set",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets/C1257B1F0058FD7C",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets",
+								"C1257B1F0058FD7C"
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all replica sets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets"
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all focus replica sets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets?focus=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets"
+							],
+							"query": [
+								{
+									"key": "focus",
+									"value": "true"
+								}
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all none focus replica sets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets?focus=false",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets"
+							],
+							"query": [
+								{
+									"key": "focus",
+									"value": "false"
+								}
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all replica set custom properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets/all/customProperties",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets",
+								"all",
+								"customProperties"
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get custom properties for x replica sets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets/all/customProperties?replicaIds=C1257E4B007EDE78,C12579AE0035A4B3,C1257714004555A9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets",
+								"all",
+								"customProperties"
+							],
+							"query": [
+								{
+									"key": "replicaIds",
+									"value": "C1257E4B007EDE78,C12579AE0035A4B3,C1257714004555A9"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all replica set details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets/all/details",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets",
+								"all",
+								"details"
+							]
+						},
+						"description": "get all replicaSets"
+					},
+					"response": []
+				},
+				{
+					"name": "Get details for x replica sets",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/replicaSets/all/details?replicaIds=C1257E4B007EDE78,C12579AE0035A4B3,C1257714004555A9",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"replicaSets",
+								"all",
+								"details"
+							],
+							"query": [
+								{
+									"key": "replicaIds",
+									"value": "C1257E4B007EDE78,C12579AE0035A4B3,C1257714004555A9"
+								}
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Custom Properties",
+			"item": [
+				{
+					"name": "Get all custom properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/customProperties",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"customProperties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all database custom properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/customProperties?type=db",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"customProperties"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "db"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all replica set custom properties",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							}
+						],
+						"url": {
+							"raw": "{{host}}/api/external/customProperties?type=rs",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"customProperties"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "rs"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Custom Property Assignment",
+			"item": [
+				{
+					"name": "Assign custom properties to x databases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"targetIds\": [402, 403, 404],\n\t\"customProperties\": {\n\t\t\"1001009\": \"floushee\",\n\t\t\"1001005\": \"Very High\"\n\t}\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/external/customPropertyAssignment/database",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"customPropertyAssignment",
+								"database"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				},
+				{
+					"name": "Assign custom properties to x  replica sets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic bWRhcGk6bWRhcGk="
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"targetIds\": [\"C1257E4B007EDE78\", \"C12579AE0035A4B3\", \"C1257714004555A9\", \"C1257E4B007EDEAA\"],\n\t\"customProperties\": {\n\t\t\"1002009\": \"floushee\",\n\t\t\"1002012\": \"NodeJS\"\n\t}\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/external/customPropertyAssignment/replicaSet",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"external",
+								"customPropertyAssignment",
+								"replicaSet"
+							]
+						},
+						"description": "get all instances"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
